@@ -15,6 +15,9 @@ export default function Home() {
       <main className={styles.main}>
         <Navbar/> {/*for testing*/}
         <Button/>
+        <div>
+          Hello World!
+        </div>
       </main>
     </>
   )
