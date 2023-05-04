@@ -5,7 +5,6 @@ type UserId = string
 type UserFirstName = string | unknown
 type UserLastName = string | unknown
 
-
 declare module "next-auth/jwt" {
   interface JWT {
     id: UserId
