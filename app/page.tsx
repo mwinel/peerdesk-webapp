@@ -1,43 +1,20 @@
 import Link from "next/link"
 
 import { cn } from "@/lib/utils"
-import { buttonVariants, Button } from "@/components/ui/button"
-import { UserAvatar } from "@/components/user-avatar"
-
-const user = {
-  name: "John Doe",
-  image: "https://i.pravatar.cc/300",
-}
+import { buttonVariants } from "@/components/ui/button"
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen p-24">
-      <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
-        Get Started
-      </Link>
-      <Button variant="default" size="sm">
-        Hello there
-      </Button>
-      <Button variant="destructive" size="md">
-        Hello there
-      </Button>
-      <Button variant="outline" size="sm">
-        Hello there
-      </Button>
-      <Button variant="subtle" size="lg">
-        Hello there
-      </Button>
-      <Button variant="ghost" size="md">
-        Hello there
-      </Button>
-      <Button variant="link" size="sm">
-        Hello there
-      </Button>
-
-      <UserAvatar
-        user={{ name: user.name || null, image: user.image || null }}
-        className="w-8 h-8"
-      />
+    <main className="container min-h-screen my-10">
+      <div className="flex items-center justify-between">
+        <h1>Landing page</h1>
+        <Link
+          href="/register"
+          className={cn(buttonVariants({ variant: "link" }))}
+        >
+          Get started
+        </Link>
+      </div>
     </main>
   )
 }

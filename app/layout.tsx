@@ -1,5 +1,8 @@
 import "@/styles/globals.css"
-import { Inter } from "next/font/google"
+import { Montserrat } from "next/font/google"
+import { cn } from "@/lib/utils"
+import { TailwindIndicator } from "@/components/tailwind-indicator"
+import { Toaster } from "@/components/ui/toaster"
 
 export const metadata = {
   title: "PeerDesk",
@@ -7,7 +10,7 @@ export const metadata = {
     "PeerDesk is a collaborative platform for new UXers to learn and practice their skills.",
 }
 
-const inter = Inter({ subsets: ["latin"] })
+const montserrat = Montserrat({ subsets: ["latin"] })
 
 export default function RootLayout({
   children,
@@ -15,8 +18,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+      lang="en"
+      className={cn("text-gray-800 antialiased", montserrat.className)}
+    >
+      <head />
+      <body>
+        {children}
+        <Toaster />
+        <TailwindIndicator />
+      </body>
     </html>
   )
 }
