@@ -1,1 +1,0 @@
-console.log("this is a test because vercel needs the public folder to exist to build the application.")
