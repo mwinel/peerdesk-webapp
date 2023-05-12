@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("text-gray-800 antialiased", montserrat.className)}
+      className={cn("text-gray-900 antialiased", montserrat.className)}
     >
       <head />
       <body>

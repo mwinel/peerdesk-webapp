@@ -33,7 +33,7 @@ export default function LoginPage() {
           <div className="flex items-center justify-center">
             <Image src={Logo} alt="logo" width={130} height={100} />
           </div>
-          <h1 className="text-2xl font-semibold tracking-tight">
+          <h1 className="text-2xl font-bold tracking-tight">
             Welcome back
           </h1>
           <p className="px-8 text-sm text-center">

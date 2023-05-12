@@ -81,11 +81,11 @@ export function UserRegisterForm({
   }
 
   return (
-    <div className={cn("grid gap-6", className)} {...props}>
+    <div className={cn("grid gap-4", className)} {...props}>
       {/* Google auth button */}
       <button
         type="button"
-        className={cn(buttonVariants({ variant: "outline" }))}
+        className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
         onClick={() => {
           setIsGoogleLoading(true)
           signIn("google")
@@ -94,16 +94,16 @@ export function UserRegisterForm({
         disabled={isLoading || isGoogleLoading || isLinkedinLoading}
       >
         {isGoogleLoading ? (
-          <Icons.spinner className="w-4 h-4 mr-2 animate-spin" />
+          <Icons.spinner className="w-5 h-5 mr-2 animate-spin" />
         ) : (
-          <Icons.google className="w-4 h-4 mr-2" />
+          <Icons.google className="w-5 h-5 mr-2" />
         )}{" "}
         Continue with Google
       </button>
       {/* Linkedin auth button */}
       <button
         type="button"
-        className={cn(buttonVariants({ variant: "outline" }))}
+        className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
         onClick={() => {
           setIsLinkedinLoading(true)
           signIn("linkedin")
@@ -111,26 +111,26 @@ export function UserRegisterForm({
         disabled={isLoading || isGoogleLoading || isLinkedinLoading}
       >
         {isLinkedinLoading ? (
-          <Icons.spinner className="w-4 h-4 mr-2 animate-spin" />
+          <Icons.spinner className="w-5 h-5 mr-2 animate-spin" />
         ) : (
-          <span className="w-5 h-5 mr-2">
+          <span className="w-6 h-6 mr-2">
             <Icons.linkedin />
           </span>
         )}{" "}
         Continue with Linkedin
       </button>
       {/* Divider */}
-      <div className="relative">
+      <div className="relative mt-2">
         <div className="absolute inset-0 flex items-center">
-          <span className="w-full border-t border-neutral-300" />
+          <span className="w-full border-t border-neutral-500" />
         </div>
-        <div className="relative flex justify-center text-xs uppercase">
-          <span className="px-2 bg-white">Or continue with</span>
+        <div className="relative flex justify-center text-sm uppercase">
+          <span className="px-2 bg-white">Or</span>
         </div>
       </div>
       {/* Credentials signup form */}
       <Form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid gap-2">
+        <div className="grid gap-3">
           <div className="grid gap-1">
             <FormField name="email">
               <FormLabel htmlFor="email">Email address</FormLabel>
@@ -178,9 +178,11 @@ export function UserRegisterForm({
               )}
             </FormField>
           </div>
-          <FormSubmit className={cn(buttonVariants(), "mt-1 w-full")}>
+          <FormSubmit
+            className={cn(buttonVariants({ size: "lg" }), "mt-2 w-full")}
+          >
             {isLoading && (
-              <Icons.spinner className="w-4 h-4 mr-2 animate-spin" />
+              <Icons.spinner className="w-5 h-5 mr-2 animate-spin" />
             )}
             Create account
           </FormSubmit>
