@@ -5,7 +5,7 @@ import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 import { buttonVariants } from "@/components/ui/button"
-import { UserAuthForm } from "@/components/user-auth-form"
+import { UserAuthForm } from "@/components/forms/user-auth-form"
 import Logo from "@/public/logo.jpeg"
 
 export const metadata: Metadata = {

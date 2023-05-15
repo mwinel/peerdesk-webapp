@@ -1,18 +1,18 @@
 import { Metadata } from "next"
 
-import { PasswordResetForm } from "@/components/forms/password-reset-form"
+import { ResetPasswordForm } from "@/components/forms/reset-password-form"
 
 export const metadata: Metadata = {
-  title: "Password reset",
+  title: "Reset your password",
   description:
-    " Enter your email and we'll send you a link to reset your password.",
+    "Enter your email and the new password you'd like to use to access your account.",
 }
 
-export default function PasswordResetPage() {
+export default function ResetPasswordPage() {
   return (
     <div className="container flex flex-col items-center justify-center w-screen h-screen">
       <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
-        <PasswordResetForm />
+        <ResetPasswordForm />
       </div>
     </div>
   )
